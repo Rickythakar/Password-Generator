@@ -14,5 +14,5 @@ Live link for password generator
 Github Link
   https://github.com/Rickythakar/Password-Generator
 
-Below you can find screenshots of the password generator and the different dialog boxes that can appear.
-
+Below you can find a screenshot of the password generator
+![Screenshot](./Screen%20Shot%202022-04-01%20at%2012.23.47%20AM.png)
