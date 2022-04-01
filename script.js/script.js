@@ -18,30 +18,42 @@ if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
   generatePassword()
 }
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
+
+//variable that will pull from special characters
 var specialCharacters = confirm ("Click confirm for special characters")
 if (specialCharacters) {
+  //function that will pull from array of special characters
   pwArray = pwArray.concat(specialChars)
 }
+
+//variable for the number characters
 var numberCharacters = confirm ("Click confirm to include number characters")
 if (numberCharacters) {
+  //function that will pull from array of number characters
 pwArray = pwArray.concat(numberChars)
 }
+
+//variable that will pull from uppercase characters
 var upperCharacters = confirm ("Click confirm to include uppercase characters")
 if (upperCharacters) {
+  //function that will pull from array of uppercase characters
 pwArray = pwArray.concat(uppercase)
 }
+
+//variable that will pull from lowercase characters
 var lowerCharacters = confirm ("Click confirm to include lowercase characters")
 if (lowerCharacters) {
 pwArray = pwArray.concat(lowercase)
 }
+
+//Variable name for created password that gets generated is createdpw
 var createdpw = "";
 for (let index = 0; index < passwordlength; index++) {
 createdpw += pwArray[Math.floor(Math.random() * pwArray.length)];
 }
+//The line below gives the user the generated password if the application is used correctly
 return createdpw
 }
-
-
 
 
 // Write password to the #password input
@@ -54,3 +66,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+//Thank you taking your time to read this code. 
