@@ -15,6 +15,7 @@ var passwordlength = prompt ("Please enter desired password lenght between 8 and
 //Criteria - Lenght of generated passsword is atleast 8 characters and no more than 128 characters.
 if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
   alert ("Length must be at least 8 characters and no more than 128 characters");
+  return null;
   generatePassword()
 }
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
@@ -63,7 +64,6 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 //Thank you taking your time to read this code. 
