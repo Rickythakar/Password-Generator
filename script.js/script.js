@@ -11,12 +11,10 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 //Function for generatePassword written below
 function generatePassword() {
 var pwArray = []
-
 var passwordlength = prompt ("Please enter desired password lenght between 8 and 128 characters")
 //Criteria - Lenght of generated passsword is atleast 8 characters and no more than 128 characters.
 if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
   alert ("Length must be at least 8 characters and no more than 128 characters");
-
   generatePassword()
 }
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
@@ -36,20 +34,15 @@ var lowerCharacters = confirm ("Click confirm to include lowercase characters")
 if (lowerCharacters) {
 pwArray = pwArray.concat(lowercase)
 }
-
-
-
-
-
-
-
-
-
-
-
-//Return option for end product within the textbox of the generated password to let user know that the password has been created.
-return "Password Generated below"
+var createdpw = "";
+for (let index = 0; index < passwordlength; index++) {
+createdpw += pwArray[Math.floor(Math.random() * pwArray.length)];
 }
+return createdpw
+}
+
+
+
 
 // Write password to the #password input
 function writePassword() {
