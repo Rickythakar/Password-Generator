@@ -16,8 +16,12 @@ console.log("Clicked on Generate Password button")
 //Prompt the user for the password criteria 
 //Criteria - Lenght of generated passsword is atleast 8 characters and no more than 128 characters.
 
-var passwordlenght - prompt ("Please enter desired password lenght between 8 and 128 characters")
-if (isNaN(passwordlenght)
+var passwordlenght=prompt ("Please enter desired password lenght between 8 and 128 characters")
+if (isNaN(passwordlenght) || passwordlenght > 8 || passwordlenght < 128);{
+alert ("Lenght must be at least 8 characters and no more than 128 characters");
+return null;
+}
+
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
 var specialChars = confirm ("Click confirm for special characters")
 var numberChars = confirm ("Click confirm to include number characters")
@@ -32,7 +36,7 @@ var lowercase = confirm ("Click confirm to include lowercase characters")
 
 
 
-)
+
 //Return option for end product within the textbox of the generated password to let user know that the password has been created.
 return "Password Generated below"
 }
