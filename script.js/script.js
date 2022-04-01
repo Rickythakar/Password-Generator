@@ -14,9 +14,10 @@ var pwArray = []
 
 var passwordlength = prompt ("Please enter desired password lenght between 8 and 128 characters")
 //Criteria - Lenght of generated passsword is atleast 8 characters and no more than 128 characters.
-if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128);{
+if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
   alert ("Length must be at least 8 characters and no more than 128 characters");
-  generatePassword();
+
+  generatePassword()
 }
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
 var specialCharacters = confirm ("Click confirm for special characters")
@@ -24,9 +25,17 @@ if (specialCharacters) {
   pwArray = pwArray.concat(specialChars)
 }
 var numberCharacters = confirm ("Click confirm to include number characters")
+if (numberCharacters) {
+pwArray = pwArray.concat(numberChars)
+}
 var upperCharacters = confirm ("Click confirm to include uppercase characters")
+if (upperCharacters) {
+pwArray = pwArray.concat(uppercase)
+}
 var lowerCharacters = confirm ("Click confirm to include lowercase characters")
-
+if (lowerCharacters) {
+pwArray = pwArray.concat(lowercase)
+}
 
 
 
