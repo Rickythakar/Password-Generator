@@ -16,7 +16,7 @@ var passwordlength = prompt ("Please enter desired password lenght between 8 and
 if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
   alert ("Length must be at least 8 characters and no more than 128 characters");
   return null;
-  generatePassword()
+
 }
 //Criteria - Option to include uppercase, lowercase, numeric, and/or special characters.
 
