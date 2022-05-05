@@ -1,5 +1,5 @@
 # Password-Generator
-Password Generator for Coding BootCamp
+Password Generator that utilizes Javascript
 
 First password generator for Coding BootCamp.
 This password generator can create a randomized password with numbers, uppercase characters, lowercase characters, and special characters.
